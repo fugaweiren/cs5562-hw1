@@ -1,0 +1,1 @@
+python launch_resnet_attack.py --batch_num 100 --batch_size 100 --results gen_data_003 2>&1 | tee logs/gen_data_003.txt

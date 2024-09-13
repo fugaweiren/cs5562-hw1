@@ -1,0 +1,1 @@
+python finetune_defense.py --results 'train_01_test003' --batch_size 100 --batch_num 20 2>&1 | tee logs/train.txt 

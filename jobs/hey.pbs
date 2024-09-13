@@ -1,0 +1,13 @@
+!/bin/sh
+
+#PBS -q normal
+#PBS -N pgd_attack
+#PBS -l select=1:ngpus=1
+#PBS -l walltime=12:00:00
+#PBS -P personal-e1373581
+
+module load miniforge3
+conda activate torch2
+cd /home/users/nus/e1373581/CS5562-HW1-main
+bash /home/users/nus/e1373581/CS5562-HW1-main/jobs/gen_data.sh
+wait
