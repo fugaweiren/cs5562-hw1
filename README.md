@@ -37,6 +37,7 @@ Setup additional environment:
 pip install scikit-learn
 ``` 
 
+
 To finetune on ./results/gen_data (train set) & test on ./results/gen_data_003 (test set)
 ```
 python finetune_defense.py --results train_01_test003 --resultsdir finetune_results --batch_size 100 --batch_num 20 2>&1 | tee logs/train.txt 
@@ -57,5 +58,14 @@ finetuned_model_state_dict= torch.load(f"finetune_results/train_01_test003",map_
 model.load_state_dict(finetuned_model_state_dict)
 
 ...
+```
+
+To load finetuned model weights that was trained by me:
+```
+Download train_01_test003 using the <google drive link> in cs5562-hw1-submission.pdf
+
+Copy train_01_test003 to finetune_results/
+
+Load model_state_dict as shown above 
 ```
 
